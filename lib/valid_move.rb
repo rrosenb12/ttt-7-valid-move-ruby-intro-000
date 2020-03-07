@@ -5,12 +5,10 @@ def valid_move?
   else
     return false
   end
-  if board[index] < 0
-    return false
-  elsif board[index] > 8
-    return false
-  else
+  if board[index].between?(0, 8)
     return true
+  else
+    return false
   end
   if (position_taken?(board, index)) true && board[index].between?(0, 8)
     return true
