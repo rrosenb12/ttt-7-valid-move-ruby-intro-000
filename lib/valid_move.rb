@@ -1,10 +1,10 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
   def position_not_taken?(board, index)
-    if board[index] == "X" || board[index] == "x" || board[index] == "O" || board[index] == "o"
-      return false
-    else
+    if board[index] != " " || board[index] != "" || board[index] != nil
       return true
+    else
+      return false
     end
   end
 
